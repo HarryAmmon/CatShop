@@ -1,16 +1,24 @@
 package clients.shopDisplay;
 
-import middle.MiddleFactory;
-import middle.OrderException;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.util.List;
 import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
+
+import javax.swing.RootPaneContainer;
+
+import middle.MiddleFactory;
+import middle.OrderException;
 
 /**
  * The visual display seen by customers (Change to graphical version)

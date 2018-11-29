@@ -5,12 +5,12 @@
 
 package dbAccess;
 
-import debug.DEBUG;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+
+import debug.DEBUG;
 
 /**
   * Manages the starting up of the database.

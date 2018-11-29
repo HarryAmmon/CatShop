@@ -1,5 +1,13 @@
 package dbAccess;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.swing.ImageIcon;
+
 /**
  * Implements Read access to the stock list
  * The stock list is held in a relational DataBase
@@ -11,9 +19,6 @@ import catalogue.Product;
 import debug.DEBUG;
 import middle.StockException;
 import middle.StockReader;
-
-import javax.swing.*;
-import java.sql.*;
 
 // There can only be 1 ResultSet opened per statement
 // so no simultaneous use of the statement object

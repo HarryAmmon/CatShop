@@ -1,8 +1,13 @@
 package clients;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.geom.Rectangle2D;
+
+import javax.swing.ImageIcon;
 
 /**
  * A class to display a picture in a client

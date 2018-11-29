@@ -1,13 +1,13 @@
 package clients.shopDisplay;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Observable;
+
 import debug.DEBUG;
 import middle.MiddleFactory;
 import middle.OrderException;
 import middle.OrderProcessing;
-
-import java.util.List;
-import java.util.Map;
-import java.util.Observable;
 
 // File is complete but not optimal
 //  Will force update of display every 2 seconds

@@ -1,5 +1,8 @@
 package middle;
 
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+
 /**
  * Facade for read/write access to the stock list.
  * The actual implementation of this is held on the middle tier.
@@ -12,9 +15,6 @@ package middle;
 import catalogue.Product;
 import debug.DEBUG;
 import remote.RemoteStockRW_I;
-
-import java.rmi.Naming;
-import java.rmi.RemoteException;
 
 /**
  * Setup connection to the middle tier

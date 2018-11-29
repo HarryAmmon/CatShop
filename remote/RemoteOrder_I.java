@@ -1,12 +1,12 @@
 package remote;
 
-import catalogue.Basket;
-import middle.OrderException;
-
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
 import java.util.Map;
+
+import catalogue.Basket;
+import middle.OrderException;
 
 /**
  * Defines the RMI interface for the Order object.

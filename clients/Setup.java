@@ -1,10 +1,15 @@
 package clients;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
 import dbAccess.DBAccess;
 import dbAccess.DBAccessFactory;
-
-import java.sql.*;
-import java.util.ArrayList;
 
 /**
  * Repopulate the database with test data

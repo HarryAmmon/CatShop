@@ -1,16 +1,20 @@
 package orders;
 
-import catalogue.Basket;
-import catalogue.Product;
-import middle.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.fail;
 
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.fail;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import catalogue.Basket;
+import catalogue.Product;
+import middle.OrderException;
+import middle.OrderProcessing;
+import middle.StockException;
+import middle.StockReadWriter;
 
 /**
  * A JUnit test of the Order class

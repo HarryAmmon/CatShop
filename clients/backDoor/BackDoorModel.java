@@ -1,14 +1,13 @@
 package clients.backDoor;
 
+import java.util.Observable;
+
 import catalogue.Basket;
-import catalogue.BetterBasket;
 import catalogue.Product;
 import debug.DEBUG;
 import middle.MiddleFactory;
 import middle.StockException;
 import middle.StockReadWriter;
-
-import java.util.Observable;
 
 /**
  * Implements the Model of the back door client

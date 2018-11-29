@@ -1,8 +1,8 @@
 package middle;
 
-import catalogue.Product;
+import javax.swing.ImageIcon;
 
-import javax.swing.*;
+import catalogue.Product;
 
 /**
   * Interface for read access to the stock list.

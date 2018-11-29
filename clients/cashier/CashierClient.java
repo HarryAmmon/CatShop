@@ -1,11 +1,10 @@
 package clients.cashier;
 
-import catalogue.*;
+import javax.swing.JFrame;
+
 import middle.MiddleFactory;
 import middle.Names;
 import middle.RemoteMiddleFactory;
-
-import javax.swing.*;
 
 /**
  * The standalone Cashier Client.
@@ -39,7 +38,7 @@ public class CashierClient
     window.setTitle( "Cashier Client (MVC RMI)");
     window.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
     
-    CashierModel      model = new CashierModel(mf);
+    CashierModel      model = new BetterCashierModel(mf);
     CashierView       view  = new CashierView( window, mf, 0, 0 );
     CashierController cont  = new CashierController( model, view );
     view.setController( cont );

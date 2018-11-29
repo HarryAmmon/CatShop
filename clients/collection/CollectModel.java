@@ -1,10 +1,10 @@
 package clients.collection;
 
+import java.util.Observable;
+
 import debug.DEBUG;
 import middle.MiddleFactory;
 import middle.OrderProcessing;
-
-import java.util.Observable;
 
 /**
  * Implements the Model of the collection client

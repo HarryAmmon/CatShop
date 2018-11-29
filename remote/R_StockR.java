@@ -1,11 +1,12 @@
 package remote;
 
+import java.rmi.RemoteException;
+
+import javax.swing.ImageIcon;
+
 import catalogue.Product;
 import dbAccess.StockR;
 import middle.StockException;
-
-import javax.swing.*;
-import java.rmi.RemoteException;
 
 // There can only be 1 ResultSet opened per statement
 // so no simultaneous use of the statement object

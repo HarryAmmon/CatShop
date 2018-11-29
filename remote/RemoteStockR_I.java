@@ -1,11 +1,12 @@
 package remote;
 
-import catalogue.Product;
-import middle.StockException;
-
-import javax.swing.*;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+
+import javax.swing.ImageIcon;
+
+import catalogue.Product;
+import middle.StockException;
 
 /**
  * Defines the RMI interface for read access to the stock object.

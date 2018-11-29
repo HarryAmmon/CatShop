@@ -1,5 +1,10 @@
 package middle;
 
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+
+import javax.swing.ImageIcon;
+
 /**
  * Facade for read access to the stock list.
  * The actual implementation of this is held on the middle tier.
@@ -12,10 +17,6 @@ package middle;
 import catalogue.Product;
 import debug.DEBUG;
 import remote.RemoteStockR_I;
-
-import javax.swing.*;
-import java.rmi.Naming;
-import java.rmi.RemoteException;
 
 /**
  * Setup connection to the middle tier

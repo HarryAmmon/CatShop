@@ -1,13 +1,13 @@
 package remote;
 
-import catalogue.Basket;
-import middle.OrderException;
-import orders.Order;
-
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 import java.util.Map;
+
+import catalogue.Basket;
+import middle.OrderException;
+import orders.Order;
 
 /**
  * The order processing handling.

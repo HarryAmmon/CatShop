@@ -1,12 +1,12 @@
 package middle;
 
-import remote.R_Order;
-import remote.R_StockR;
-import remote.R_StockRW;
-
 import java.net.InetAddress;
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
+
+import remote.R_Order;
+import remote.R_StockR;
+import remote.R_StockRW;
 
 
 /**

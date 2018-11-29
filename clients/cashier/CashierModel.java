@@ -1,11 +1,15 @@
 package clients.cashier;
 
+import java.util.Observable;
+
 import catalogue.Basket;
 import catalogue.Product;
 import debug.DEBUG;
-import middle.*;
-
-import java.util.Observable;
+import middle.MiddleFactory;
+import middle.OrderException;
+import middle.OrderProcessing;
+import middle.StockException;
+import middle.StockReadWriter;
 
 /**
  * Implements the Model of the cashier client
@@ -160,7 +164,7 @@ public class CashierModel extends Observable
   }
 
   /**
-   * ask for update of view callled at start of day
+   * ask for update of view called at start of day
    * or after system reset
    */
   public void askForUpdate()
@@ -192,9 +196,10 @@ public class CashierModel extends Observable
    * return an instance of a new Basket
    * @return an instance of a new Basket
    */
-  protected Basket makeBasket()
-  {
-    return new Basket();
+  protected Basket makeBasket(){
+	  return new Basket();
   }
+  
 }
+
   

@@ -1,15 +1,21 @@
 package clients.customer;
 
-import catalogue.Basket;
-import catalogue.BetterBasket;
+import java.awt.Container;
+import java.awt.Font;
+import java.util.Observable;
+import java.util.Observer;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.RootPaneContainer;
+
 import clients.Picture;
 import middle.MiddleFactory;
 import middle.StockReader;
-
-import javax.swing.*;
-import java.awt.*;
-import java.util.Observable;
-import java.util.Observer;
 
 /**
  * Implements the Customer view.

@@ -1,9 +1,9 @@
 package middle;
 
-import catalogue.Basket;
-
 import java.util.List;
 import java.util.Map;
+
+import catalogue.Basket;
 
 /**
   * Defines the interface for accessing the order processing system.

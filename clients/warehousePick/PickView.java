@@ -1,13 +1,19 @@
 package clients.warehousePick;
 
+import java.awt.Container;
+import java.awt.Font;
+import java.util.Observable;
+import java.util.Observer;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.RootPaneContainer;
+
 import catalogue.Basket;
 import middle.MiddleFactory;
 import middle.OrderProcessing;
-
-import javax.swing.*;
-import java.awt.*;
-import java.util.Observable;
-import java.util.Observer;
 
 /**
  * Implements the Customer view.

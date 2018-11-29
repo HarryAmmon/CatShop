@@ -1,5 +1,6 @@
 package clients;
-import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 /**
  * Returns a position for the client window on the screen

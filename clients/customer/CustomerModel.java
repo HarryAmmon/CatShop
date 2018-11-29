@@ -1,5 +1,9 @@
 package clients.customer;
 
+import java.util.Observable;
+
+import javax.swing.ImageIcon;
+
 import catalogue.Basket;
 import catalogue.Product;
 import debug.DEBUG;
@@ -7,9 +11,6 @@ import middle.MiddleFactory;
 import middle.OrderProcessing;
 import middle.StockException;
 import middle.StockReader;
-
-import javax.swing.*;
-import java.util.Observable;
 
 /**
  * Implements the Model of the customer client

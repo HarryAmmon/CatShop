@@ -1,11 +1,11 @@
 package clients;
 
+import javax.swing.JApplet;
+
 import debug.DEBUG;
 import middle.MiddleFactory;
 import middle.Names;
 import middle.RemoteMiddleFactory;
-
-import javax.swing.*;
 
 /**
  * The Customer Client as an Applet

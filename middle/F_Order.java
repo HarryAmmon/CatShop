@@ -1,12 +1,12 @@
 package middle;
 
-import catalogue.Basket;
-import debug.DEBUG;
-import remote.RemoteOrder_I;
-
 import java.rmi.Naming;
 import java.util.List;
 import java.util.Map;
+
+import catalogue.Basket;
+import debug.DEBUG;
+import remote.RemoteOrder_I;
 
 // There can only be 1 ResultSet opened per statement
 // so no simultaneous use of the statement object

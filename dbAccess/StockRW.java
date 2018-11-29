@@ -1,5 +1,7 @@
 package dbAccess;
 
+import java.sql.SQLException;
+
 /**
  * Implements Read /Write access to the stock list
  * The stock list is held in a relational DataBase
@@ -11,8 +13,6 @@ import catalogue.Product;
 import debug.DEBUG;
 import middle.StockException;
 import middle.StockReadWriter;
-
-import java.sql.SQLException;
 
 // There can only be 1 ResultSet opened per statement
 // so no simultaneous use of the statement object

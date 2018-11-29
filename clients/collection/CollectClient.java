@@ -1,10 +1,10 @@
 package clients.collection;
 
+import javax.swing.JFrame;
+
 import middle.MiddleFactory;
 import middle.Names;
 import middle.RemoteMiddleFactory;
-
-import javax.swing.*;
 
 /**
  * The standalone Collection Client.

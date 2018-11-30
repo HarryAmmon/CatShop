@@ -17,18 +17,22 @@ public class BetterBasket extends Basket implements Serializable
   // You need to add code here
   /**
    * New constructor
-   * Will create a hashmao to store products in the basket in
+   * Will create a hashmap to store products in the basket in
    *
    */
   public BetterBasket() {
-	  HashMap<String, Product> basket = new HashMap<String, Product>();
+	  //HashMap<String, Product> basket = new HashMap<String, Product>();
 	  theOrderNum = 0;
-	  System.out.println("Hello");
   }
   
   @Override
   public boolean add(Product pr) {
-	  
-	  return true;
+	  for(int i = 0;i<super.size();i++) {
+		  if(super.get(i).getProductNum().equals(pr.getProductNum())) {
+			  super.get(i).setQuantity(super.get(i).getQuantity()+1);
+			  return true;
+		  }
+	  }
+	  return super.add(pr);
   }
 }

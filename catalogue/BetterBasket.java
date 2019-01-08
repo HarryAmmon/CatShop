@@ -1,7 +1,6 @@
 package catalogue;
 
 import java.io.Serializable;
-import java.util.HashMap;
 
 /**
  * Write a description of class BetterBasket here.

@@ -39,9 +39,9 @@ import middle.MiddleFactory;
  */
 class Main
 {
-  // Change to false to reduce the number of duplicated clients
+	// Change to false to reduce the number of duplicated clients
 	// CHANGED TO FALSE
-  private final static boolean many = false;        // Many clients
+	private final static boolean many = false;        // Many clients
 
   public static void main (String args[])
   {

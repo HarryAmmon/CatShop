@@ -151,6 +151,7 @@ public class CashierModel extends Observable
         theBasket = null;                     //  reset
       }                                       //
       theAction = "Next customer";            // New Customer
+      //theAction = "2Next";
       theState = State.process;               // All Done
       theBasket = null;
     } catch( OrderException e )
@@ -166,10 +167,47 @@ public class CashierModel extends Observable
   /**
    * Remove item from basket given product number
    */
-  public void doRemove() {
-	  System.out.println("do Remove is running");
+  public void doRemove(String prdNumber) {
+	  String theAction = "";
+	  String prdNum = prdNumber.trim();
+	  int prdLocation;
+	  int quantity;								// Product quantity
+	  
+	  if (theBasket == null) {
+		  theAction = "Basket is already empty";
+	  }
+	  else if (theBasket.size() >= 1){
+		  prdLocation = isInBasket(prdNum);
+		  if(prdLocation == -1) {
+			  theAction = "Product not found";
+		  }
+		  else {
+			  theAction = "Product found";
+			  quantity = theBasket.get(prdLocation).getQuantity();
+			  if(quantity > 1) {
+				  theBasket.get(prdLocation).setQuantity(quantity - 1);
+				  theAction = "Removed Product " + prdNum;
+			  }
+			  else {
+				  theBasket.remove(prdLocation);
+			  }
+		  }
+	  }
+	  setChanged(); notifyObservers(theAction);
   }
-
+  
+  /**
+   * Returns true if product is in basket
+   */
+  private int isInBasket(String prdNum) {
+	  int found = -1; // Found is equal to -1 if item is not in basket
+	  for(int i = 0 ;i < theBasket.size();i++) {
+		  if(theBasket.get(i).getProductNum().equals(prdNum)) {
+			  found = i;
+		  }
+	  }
+	  return found;
+  }
   /**
    * ask for update of view called at start of day
    * or after system reset

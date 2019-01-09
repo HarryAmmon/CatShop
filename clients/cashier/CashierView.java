@@ -90,7 +90,7 @@ public class CashierView implements Observer
     
     theBtRm.setBounds( 16, 25+60*2, 80, 40);		// 'Remove' Button
     theBtRm.addActionListener(                  	// Call back code
-    	      e -> cont.doRemove() );
+      e -> cont.doRemove( theInput.getText()) );
     cp.add(theBtRm);								// Add to canvas
 
     theAction.setBounds( 110, 25 , 270, 20 );       // Message area

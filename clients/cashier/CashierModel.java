@@ -162,6 +162,13 @@ public class CashierModel extends Observable
     theBasket = null;
     setChanged(); notifyObservers(theAction); // Notify
   }
+  
+  /**
+   * Remove item from basket given product number
+   */
+  public void doRemove() {
+	  System.out.println("do Remove is running");
+  }
 
   /**
    * ask for update of view called at start of day

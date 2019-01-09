@@ -30,7 +30,6 @@ public class CashierController
   {
     model.doCheck(pn);
   }
-
    /**
    * Buy interaction from view
    */
@@ -45,5 +44,12 @@ public class CashierController
   public void doBought()
   {
     model.doBought();
+  }
+  
+  /**
+   * Remove interaction from view
+   */
+  public void doRemove(){
+	  model.doRemove();
   }
 }

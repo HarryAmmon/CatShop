@@ -198,7 +198,9 @@ public class CashierModel extends Observable
   }
   
   /**
-   * Returns true if product is in basket
+   * Returns the location of the product given the product number
+   * Returns -1 if product is not in basket if product is in basket
+   * @return found The location in the data structure of the product
    */
   private int posInBasket(String prdNum) {
 	  int found = -1; // Found is equal to -1 if item is not in basket

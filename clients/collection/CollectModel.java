@@ -1,5 +1,8 @@
 package clients.collection;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Observable;
 
 import debug.DEBUG;
@@ -57,7 +60,8 @@ public class CollectModel extends Observable
        theOrder.informOrderCollected( orderNum );
       if ( ok )
       {
-        theAction = "";
+        recordOrder();
+    	theAction = "";
         theOutput = "Collected order #" + orderNum;
       }
       else
@@ -75,6 +79,17 @@ public class CollectModel extends Observable
     setChanged(); notifyObservers(theAction);
   }
 
+  /**
+   * 
+   */
+  private void recordOrder() 
+	  throws IOException{
+	  	FileWriter fileWriter = new FileWriter("orderHistory/testWrite.txt");
+	    PrintWriter printWriter = new PrintWriter(fileWriter);
+	    printWriter.printf("Test text");
+	    printWriter.close(); 
+	  }
+  
   /**
    * The output to be displayed
    * @return The string to be displayed

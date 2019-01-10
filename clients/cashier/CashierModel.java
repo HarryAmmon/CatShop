@@ -170,26 +170,27 @@ public class CashierModel extends Observable
   public void doRemove(String prdNumber) {
 	  String theAction = "";
 	  String prdNum = prdNumber.trim();
-	  int prdLocation;
+	  int prdLocation;							// location of product in data structure
 	  int quantity;								// Product quantity
 	  
-	  if (theBasket == null) {
-		  theAction = "Basket is already empty";
+	  if (theBasket == null) {					// If the basket is empty
+		  theAction = "Basket is already empty";// Tell the client
 	  }
-	  else if (theBasket.size() >= 1){
-		  prdLocation = isInBasket(prdNum);
-		  if(prdLocation == -1) {
-			  theAction = "Product not found";
+	  else if (theBasket.size() >= 1){			// If the basket has one or more item in it
+		  prdLocation = posInBasket(prdNum);	// finds the location of the product that is to be removed
+		  if(prdLocation == -1) {				// -1 is used to show product is not in basket
+			  theAction = "Product not in basket";
 		  }
-		  else {
-			  theAction = "Product found";
+		  else {								// If the product is in the basket
+			  theAction = "Product found";		// Tell the user
 			  quantity = theBasket.get(prdLocation).getQuantity();
-			  if(quantity > 1) {
-				  theBasket.get(prdLocation).setQuantity(quantity - 1);
+			  if(quantity > 1) {				// If their is more than one of a product
+				  theBasket.get(prdLocation).setQuantity(quantity - 1);	// Decrease the quantity
 				  theAction = "Removed Product " + prdNum;
 			  }
 			  else {
-				  theBasket.remove(prdLocation);
+				  theBasket.remove(prdLocation);// Remove the product
+				  theAction = "Removed Product "+ prdNum; // Tell the client
 			  }
 		  }
 	  }
@@ -199,7 +200,7 @@ public class CashierModel extends Observable
   /**
    * Returns true if product is in basket
    */
-  private int isInBasket(String prdNum) {
+  private int posInBasket(String prdNum) {
 	  int found = -1; // Found is equal to -1 if item is not in basket
 	  for(int i = 0 ;i < theBasket.size();i++) {
 		  if(theBasket.get(i).getProductNum().equals(prdNum)) {

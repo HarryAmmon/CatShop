@@ -48,6 +48,7 @@ public class CashierController
   
   /**
    * Remove interaction from view
+   * @param prdNumber The product number
    */
   public void doRemove(String prdNumber) {
 	  model.doRemove( prdNumber );

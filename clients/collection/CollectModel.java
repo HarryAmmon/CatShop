@@ -7,6 +7,7 @@ import java.util.Observable;
 
 import debug.DEBUG;
 import middle.MiddleFactory;
+import middle.OrderException;
 import middle.OrderProcessing;
 
 /**
@@ -80,12 +81,18 @@ public class CollectModel extends Observable
   }
 
   /**
+   * @throws OrderException 
    * 
    */
   private void recordOrder() 
-	  throws IOException{
-	  	FileWriter fileWriter = new FileWriter("orderHistory/testWrite.txt");
+	  throws IOException, OrderException{
+	  	String fileName = Integer.toString(theOrder.uniqueNumber());
+	  	
+	  	FileWriter fileWriter = new FileWriter("orderHistory/"+fileName+".txt");
 	    PrintWriter printWriter = new PrintWriter(fileWriter);
+	    for(int i = 0; i < theOrder.getOrderToPick().size(); i++) {
+	    	printWriter.println(theOrder.getOrderState().get(i));
+	    }
 	    printWriter.printf("Test text");
 	    printWriter.close(); 
 	  }

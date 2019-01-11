@@ -28,8 +28,18 @@ public class BetterBasket extends Basket implements Serializable
 			  return true;
 		  }
 	  }
-	  // If the product is not found then call original add function to
-	  // to add to the ArrayList
+	  
+	  // This will only run if the product is not already found in the list
+	  for(int j = 0; j < super.size(); j++) { // Length of Arraylist
+		  // Converts both product numbers to ints
+		  // If the product number of the current product is smaller than the product number of the new product
+		if(Integer.parseInt(super.get(j).getProductNum()) > Integer.parseInt(pr.getProductNum())) {
+			super.add(j, pr); // Will add current product to position j in the arraylist
+			return true;
+		}  
+	  }
+	  // If no products are in the basket, the super.add method will be used
+	  // to add Product pr to the ArrayList
 	  return super.add(pr);
   }
 }

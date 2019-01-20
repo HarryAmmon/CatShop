@@ -21,7 +21,7 @@ public class BetterBasket extends Basket implements Serializable
   @Override
   public boolean add(Product pr) {
 	  for(int i = 0;i<super.size();i++) { // length of Arraylist
-		// If the product number for two products match
+		  // If the product number for two products match
 		  if(super.get(i).getProductNum().equals(pr.getProductNum())) {
 			  // Get the current quantity of that product and increase by one
 			  super.get(i).setQuantity(super.get(i).getQuantity()+1); 

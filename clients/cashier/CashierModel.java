@@ -198,13 +198,14 @@ public class CashierModel extends Observable
   }
   
   /**
-   * Returns true if product is in basket
+   * @return location of the product in the basket
    */
   private int posInBasket(String prdNum) {
 	  int found = -1; // Found is equal to -1 if item is not in basket
-	  for(int i = 0 ;i < theBasket.size();i++) {
+	  for(int i = 0 ;i < theBasket.size();i++) { // Traverse the basket
+		  // If the products ID match
 		  if(theBasket.get(i).getProductNum().equals(prdNum)) {
-			  found = i;
+			  found = i; // Update found to be the index of the item
 		  }
 	  }
 	  return found;
